@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quadrado Verde</title>
 </head>
+
 <body>
 
   <canvas width="600" height="400"></canvas>
 
   <script>
 
-    function desenhaQuadradoVerde() {
+    function desenhaQuadrado(x, y, cor) {
 
       var tela = document.querySelector('canvas');
       var pincel = tela.getContext('2d');
 
-      pincel.fillStyle = 'green';
-      pincel.fillRect(0, 0, 50, 50);
+      pincel.fillStyle = cor;
+      pincel.fillRect(x, y, 50, 50);
       pincel.fillStroke = 'black';
-      pincel.strokeRect(0, 0, 50, 50);
+      pincel.strokeRect(x, y, 50, 50);
 
     }
 
-    desenhaQuadradoVerde();
+    desenhaQuadrado(0, 100, 'blue');
+    desenhaQuadrado(0, 150, 'red');
+    desenhaQuadrado(0, 200, 'yellow');
+
+    desenhaQuadrado(0, 0, 'green');
+    desenhaQuadrado(50, 0, 'green');
+    desenhaQuadrado(100, 0, 'green');
+
+
 
 
   </script>
 </body>
+
 </html>
