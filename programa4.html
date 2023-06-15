@@ -30,8 +30,16 @@
       pincel.clearRect(0, 0, 600, 400);
     }
 
-    limpaTela();
-    desenhaCirculo(x, 20, 10);
+    var x = 20
+
+    function atualizaTela() {
+      // Limpar a tela para não ficar com o circulo anterior no canvas
+      limpaTela();
+      desenhaCirculo(x, 20, 10);
+      x++;
+    }
+
+    setInterval(atualizaTela, 10);
 
   </script>
 </body>
